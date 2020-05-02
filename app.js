@@ -2,6 +2,7 @@ $(document).ready(() => {
   const crystal = $(".crystal");
   const displayScore = $("#display_score");
   const targetScoreDisplay = $("#target_score");
+  const endMessage = $("#end_message");
   let targetScore = 0;
   let accScore = 0;
 
@@ -37,6 +38,18 @@ $(document).ready(() => {
     });
   });
 
-  function 
+  function endRound(x) {
+    $(".crystal").prop("disabled", true);
+    endMessage
+      .append(
+        `
+      <div class="end_message"
+        <h1>The Great Crystal Says</h1>
+        <h1>You ${x}</h1>
+      </div>`
+      )
+      .hide()
+      .fadeIn(2000);
+  }
   getTargetScore();
 });
