@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.bg_img {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 999;
+}
+
+.bg_img:after {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  -webkit-animation-name: invert;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@-webkit-keyframes invert {
+  0% {
+    filter: invert(0);
+  }
+  25% {
+    filter: invert(0.25);
+  }
+  50% {
+    filter: invert(1);
+  }
+  75% {
+    filter: invert(0.75);
+  }
+  100% {
+    filter: invert(0);
+  }
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.app_container {
+  position: absolute;
+  z-index: 1;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.575);
+  color: rgb(230, 230, 230);
+  width: 100%;
+  margin-bottom: 150px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+header h1 {
+  justify-self: center;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.crystal {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.one {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+.two {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(102, 255, 0),
+    inset -20px 0 80px rgb(251, 255, 0), inset 20px 0 300px rgb(102, 255, 0),
+    inset -20px 0 300px rgb(251, 255, 0), 0 0 50px #fff,
+    -10px 0 80px rgb(102, 255, 0), 10px 0 80px rgb(251, 255, 0);
+}
+.three {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(4, 0, 255),
+    inset -20px 0 80px rgb(255, 0, 149), inset 20px 0 300px rgb(4, 0, 255),
+    inset -20px 0 300px rgb(255, 0, 149), 0 0 50px #fff,
+    -10px 0 80px rgb(4, 0, 255), 10px 0 80px rgb(255, 0, 149);
+}
+.four {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(255, 102, 0),
+    inset -20px 0 80px #0ff, inset 20px 0 300px rgb(255, 102, 0),
+    inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px rgb(255, 102, 0),
+    10px 0 80px #0ff;
+}
+
+.crystal:hover {
+  transform: scale(1.1);
+}
+.crystal:active {
+  transform: scale(0.9);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.main_crystal {
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(0, 255, 255);
+  margin-bottom: 150px;
+  box-shadow: inset 0 0 40px rgb(143, 168, 197),
+    1px 0px 80px 20px hsl(0, 0%, 0%);
+  -webkit-animation-name: colorShift;
+  -webkit-animation-name: warp;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.little_crystle {
+  text-align: center;
+  width: 100px;
+  height: 95px;
+  border-radius: 100%;
+  background-color: rgb(89, 0, 255);
+  box-shadow: inset 0 0 20px rgb(255, 255, 255),
+    1px 0px 80px 20px hsl(0, 0%, 0%);
+  margin: 14% auto;
+  -webkit-animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  /* -webkit-animation: rotate 1s linear 0 infinite 0 0;
+  animation: rotate 1s linear 0 infinite 0 0; */
+}
+.steady {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  -webkit-animation-name: anti-rotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes colorShift {
+  0% {
+    box-shadow: inset 20px 0 80px hsl(0, 100%, 50%),
+      inset -20px 0 80px hsl(180, 100%, 50%), inset 20px 0 300px rgb(255, 0, 0),
+      inset -20px 0 300px hsl(180, 100%, 50%), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 0, 0), 10px 0 80px hsl(180, 100%, 50%);
+  }
+  25% {
+    box-shadow: inset 20px 0 80px hsl(90, 100%, 50%),
+      inset -20px 0 80px hsl(270, 100%, 50%),
+      inset 20px 0 300px hsl(90, 100%, 50%),
+      inset -20px 0 300px hsl(270, 100%, 50%), 0 0 50px #fff,
+      -10px 0 80px hsl(90, 100%, 50%), 10px 0 80px hsl(270, 100%, 50%);
+  }
+  50% {
+    box-shadow: inset 20px 0 80px hsl(180, 100%, 50%),
+      inset -20px 0 80px hsl(360, 100%, 50%),
+      inset 20px 0 300px hsl(180, 100%, 50%),
+      inset -20px 0 300px hsl(360, 100%, 50%), 0 0 50px #fff,
+      -10px 0 80px hsl(180, 100%, 50%), 10px 0 80px hsl(360, 100%, 50%);
+  }
+  75% {
+    box-shadow: inset 20px 0 80px hsl(270, 100%, 50%),
+      inset -20px 0 80px hsl(90, 100%, 50%),
+      inset 20px 0 300px hsl(270, 100%, 50%),
+      inset -20px 0 300px hsl(90, 100%, 50%), 0 0 50px #fff,
+      -10px 0 80px hsl(270, 100%, 50%), 10px 0 80px hsl(90, 100%, 50%);
+  }
+  100% {
+    box-shadow: inset 20px 0 80px hsl(0, 100%, 50%),
+      inset -20px 0 80px hsl(180, 100%, 50%), inset 20px 0 300px rgb(255, 0, 0),
+      inset -20px 0 300px hsl(180, 100%, 50%), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 0, 0), 10px 0 80px hsl(180, 100%, 50%);
+  }
+}
+
+@-webkit-keyframes warp {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
