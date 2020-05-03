@@ -195,10 +195,10 @@ main {
   background-color: hsla(261, 100%, 50%, 0.5);
   box-shadow: inset 0 0 40px rgb(143, 168, 197),
     1px 0px 80px 20px hsl(0, 0%, 0%);
-  border-radius: 50%;
+  border-radius: 50px;
   padding: 30px;
   margin: 100px auto 50px auto;
-  max-width: 300px;
+  max-width: 800px;
 }
 
 @keyframes invert {
