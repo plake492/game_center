@@ -12,6 +12,12 @@ body {
   font-family: "Mountains of Christmas", cursive;
   height: 100vh;
 }
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -55,11 +61,6 @@ input[type="reset"] {
   animation-iteration-count: infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
 }
 
 .app_container {
@@ -123,9 +124,11 @@ main {
 .crystal:hover {
   transform: scale(1.1);
 }
+
 .crystal:active {
   transform: scale(0.9);
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -291,23 +294,5 @@ main {
   }
   100% {
     transform: rotateZ(360deg);
-  }
-}
-
-@keyframes opposite-rotate {
-  0% {
-    transform: rotateZ(180deg);
-  }
-  25% {
-    transform: rotateZ(270deg);
-  }
-  50% {
-    transform: rotateZ(0);
-  }
-  75% {
-    transform: rotateZ(90deg);
-  }
-  100% {
-    transform: rotateZ(180deg);
   }
 }

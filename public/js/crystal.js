@@ -17,10 +17,10 @@ $(document).ready(() => {
     Math.floor(Math.random() * (max - min) + min);
 
   const crystalSelectors = {
-    one: getCrystlalValue(4, 16),
-    two: getCrystlalValue(4, 16),
-    three: getCrystlalValue(4, 16),
-    four: getCrystlalValue(4, 16),
+    one: getCrystlalValue(4, 15),
+    two: getCrystlalValue(4, 15),
+    three: getCrystlalValue(4, 15),
+    four: getCrystlalValue(4, 15),
   };
 
   // * HANDLE CRYSTAL CLICK EVETNS * //
